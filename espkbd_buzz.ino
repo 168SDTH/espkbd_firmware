@@ -25,18 +25,6 @@ void setup() {
   digitalWrite(GND, LOW);
   digitalWrite(buzz, LOW);
 
-
-  // while(1){
-  //   if (Serial.available()>=19){
-  //     Serial.readBytes(item,19);
-  //     if (Serial.readBytes(19)=="are you a keyboard?"){
-  //     Serial.print("yes i am a esp8266 keyboard!");
-  //     break;
-  //     }
-
-  //     Serial.print("item");
-  //   }
-  // }
 }
 void buzzopen() {
   digitalWrite(buzz, HIGH);
@@ -58,18 +46,23 @@ void keybd() {
   }
   if (key[0] < 1 && status[0] == 0) {
     Serial.print("A1");
+    buzzopen();
     status[0] = 1;
+    
   }
   if (key[1] < 1 && status[1] == 0) {
     Serial.print("B1");
+    buzzopen();
     status[1] = 1;
   }
   if (key[2] < 1 && status[2] == 0) {
     Serial.print("C1");
+    buzzopen();
     status[2] = 1;
   }
   if (key[3] < 1 && status[3] == 0) {
     Serial.print("D1");
+    buzzopen();
     status[3] = 1;
   }
   if (key[0] > 48 && status[0] == 1) {

@@ -26,23 +26,8 @@ void setup() {
   digitalWrite(buzz, LOW);
 
 
-  // while(1){
-  //   if (Serial.available()>=19){
-  //     Serial.readBytes(item,19);
-  //     if (Serial.readBytes(19)=="are you a keyboard?"){
-  //     Serial.print("yes i am a esp8266 keyboard!");
-  //     break;
-  //     }
+}
 
-  //     Serial.print("item");
-  //   }
-  // }
-}
-void buzzopen() {
-  digitalWrite(buzz, HIGH);
-  delay(10);
-  digitalWrite(buzz, LOW);
-}
 
 void keybd() {
   key[0] = 0;
